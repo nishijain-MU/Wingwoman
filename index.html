@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wingwoman - Your AI Dating Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#E91E63',
+                hover: '#C2185B',
+                light: '#F8BBD0',
+                subtle: '#FCE4EC',
+              },
+              secondary: {
+                DEFAULT: '#9C27B0',
+                hover: '#7B1FA2',
+              },
+              accent: {
+                DEFAULT: '#FF6F61',
+                soft: '#FFAB9D',
+              },
+              neutral: {
+                bg: '#FAFAFA',
+                surface: '#FFFFFF',
+                text: '#1A1A2E',
+                subtext: '#666666',
+              },
+              // Remapped to CSS variables for dynamic switching
+              dark: {
+                bg: 'var(--color-bg)',
+                surface: 'var(--color-surface)',
+                elevated: 'var(--color-elevated)',
+                text: 'var(--color-text)',
+                subtext: 'var(--color-subtext)',
+                border: 'var(--color-border)',
+              }
+            },
+            fontFamily: {
+              display: ['Montserrat', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap');
+      
+      :root {
+        /* Default Dark Mode Values */
+        --color-bg: #0F0F1E;
+        --color-surface: #1A1A2E;
+        --color-elevated: #252538;
+        --color-text: #FFFFFF;
+        --color-subtext: #B8B8D1;
+        --color-border: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Light Mode Values */
+      .light-mode {
+        --color-bg: #FAFAFA;
+        --color-surface: #FFFFFF;
+        --color-elevated: #F3F4F6;
+        --color-text: #1A1A2E;
+        --color-subtext: #4B5563;
+        --color-border: rgba(0, 0, 0, 0.1);
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2D2D44;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #E91E63;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.45.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-dark-bg text-dark-text min-h-screen transition-colors duration-200">
+    <div id="root"></div>
+  </body>
+</html>
